@@ -23,19 +23,10 @@
                 <mxCell id="3" value="Accuracy&lt;br&gt;missed:integer&lt;br&gt;hit:integer&lt;br&gt;user_id:integer&lt;br&gt;percent :integer&lt;br&gt;game_id:integer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="300" y="30" width="120" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="4">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="393" y="290" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="580" y="290"/>
-                            <mxPoint x="393" y="290"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="4" value="Game&lt;br&gt;name&lt;br&gt;description&lt;br&gt;id:integer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="510" y="60" width="140" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="User_Game&lt;br&gt;user_id&lt;br&gt;game_id" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                <mxCell id="9" value="Comment&lt;br&gt;comment&lt;br&gt;user_id&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
                     <mxGeometry x="280" y="230" width="110" height="110" as="geometry"/>
                 </mxCell>
             </root>
