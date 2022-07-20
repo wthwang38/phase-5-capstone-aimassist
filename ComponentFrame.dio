@@ -8,7 +8,8 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="390" y="190"/>
-                            <mxPoint x="390" y="245"/>
+                            <mxPoint x="390" y="220"/>
+                            <mxPoint x="358" y="220"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -33,7 +34,7 @@
                 <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Card&lt;br&gt;-to hold the button to click&lt;br&gt;-set time for 5 secs before hiding&lt;br&gt;-true/false function with a state&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="4" value="Card&lt;br&gt;-to hold the button to click&lt;br&gt;-set time for 3 secs before hiding&lt;br&gt;-true/false function with a state" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="127.5" y="350" width="200" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1.015;entryY=0.563;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8" target="4" edge="1">
@@ -48,11 +49,11 @@
                 <mxCell id="11" value="User Profile" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="410" y="250" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="13" target="2" edge="1">
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="13" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="About" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="550" y="260" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="640" y="140" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="16" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>

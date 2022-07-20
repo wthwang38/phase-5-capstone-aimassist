@@ -1,9 +1,11 @@
 User Story:
 
     Give the user practice for hand/eye coordination.
-    
+    The app will log your stats for every game.
+    and you can make comments on other profiles.
 
-
+    Stretch:
+    Users can watch each other play or play with each other.
 
 # Getting Started with Create React App
 
