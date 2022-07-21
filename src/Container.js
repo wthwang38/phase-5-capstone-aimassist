@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 //import useMightyMouse from 'react-hook-mighty-mouse'
+
 const Container = () => {
-   
+   const [xNum, setXNum] = useState(100)
+   const [yNum, setYNum] = useState(200)
     // const { position: { client }, } = useMightyMouse();
     // const clickPosition = () => {
     //     console.log("x:", client.x)
@@ -15,15 +17,20 @@ const Container = () => {
         return colors[Math.floor(Math.random() * colors.length + 1)]
     }
     const y = {
-        marginTop: `100px`
+        marginTop: `${yNum}px`
     }
     const x = {
-        marginInline: `500px`
+        marginInline: `${xNum}px`
+    }
+    function handleClick(){
+        let x1 = getRandomNumber(1, 800)
+        let y1 = getRandomNumber(1, 500)
+        setXNum(x1)
+        setYNum(y1)
     }
     //function createRandomCircles(){}
-    const circle = <div className="circle" style={Object.assign({}, x, y)}></div>
+    const circle = <div className="circle" style={Object.assign({}, x, y)} onClick={()=> handleClick()}></div>
 
-    console.log(getRandomNumber())
     return (
         // <div id="playbox" onClick={() => clickPosition()}>
          <div id='playbox'> 
