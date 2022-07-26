@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-
+import GameTimer from './GameTimer';
 const Container = () => {
     const [xNum, setXNum] = useState(1)
     const [yNum, setYNum] = useState(1)
@@ -9,16 +9,17 @@ const Container = () => {
     const [circleCount, setCircleCount] = useState(1) //logs circle clicks
     const [gameTimer, setGameTimer] = useState(0) 
     const colors = ['#ee82ee', '#00FFFF', '#6495ED', '#8A2BE2', '#FFD700', '#191970', '#7fff00', '#8b00b8', '#ff1493', '#48d1cc']
-    let circleTime = useRef(null);
+    // let circleTime = useRef(null);
+let circleTime;
 
          const circleTimer = ()=> {
-        circleTime = setTimeout(createRandomCircles, 3000)
+        circleTime = setTimeout(createRandomCircles, 2000)
         return (createRandomCircles() && circleTime)  
     }
-    useEffect(()=> {
+    // useEffect(()=> {
 
-       return () => clearTimeout(circleTime.current);
-    },[endClicked])
+    //    return () => clearTimeout(circleTime.current);
+    // },[endClicked])
 
    function getRandomNumber(min, max){
         return Math.floor(Math.random() * (max - min) + min)
@@ -60,7 +61,9 @@ const Container = () => {
     console.log("Missed:", missedClicks())
     console.log("Hits:",circleCount-1)
     console.log("Total:",totalCount-1)
-    setEndClicked(!endClicked)
+    clearTimeout(circleTime)
+    circleTime = null
+    // setEndClicked(!endClicked)
     setYNum(1000)
     setXNum(1000)
     setCircleCount(1)
@@ -74,12 +77,12 @@ const Container = () => {
   
     return (
         <div>
-            <div>{gameTimer}</div>
+            <GameTimer gameTimer={gameTimer} setGameTimer={setGameTimer}/>
             <div id="missed">Missed: {missedClicks()}</div>
             <div id="hit">Hits: {circleCount-1}</div>
             <div id="total">Total: {totalCount-1}</div>
             <button id="start_button" onClick={circleTimer}>START</button>
-            {/* <button id="start_button" onClick={endGame}>end</button> */}
+            <button id="start_button" onClick={endGame}>end</button>
          <div id='playbox' onClick={()=> clickCounter(totalCount, setTotalCount)}> 
             <div>{circle}</div>
         </div>
