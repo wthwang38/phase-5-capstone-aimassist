@@ -1,37 +1,37 @@
 <mxfile host="65bd71144e">
     <diagram id="Rxo2oslZmJ2QnC6qgLjG" name="Page-1">
-        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="651" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="9">
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.577;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.577;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="User&lt;br&gt;name&lt;br&gt;image_profile&lt;br&gt;id:integer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="User&lt;br&gt;name&lt;br&gt;image_profile&lt;br&gt;id:integer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="70" width="130" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.007;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="4">
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.007;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="3" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Accuracy&lt;br&gt;missed:integer&lt;br&gt;hit:integer&lt;br&gt;user_id:integer&lt;br&gt;percent :integer&lt;br&gt;game_id:integer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="300" y="30" width="120" height="130" as="geometry"/>
+                <mxCell id="3" value="Accuracy&lt;br&gt;missed:integer&lt;br&gt;hit:integer&lt;br&gt;total:integer&lt;br&gt;timeba:float&lt;br&gt;acc_percent :float&lt;br&gt;game_id:integer&lt;br&gt;user_id:integer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="30" width="120" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.688;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="3">
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.688;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Game&lt;br&gt;name&lt;br&gt;description&lt;br&gt;id:integer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="570" y="30" width="140" height="90" as="geometry"/>
+                <mxCell id="4" value="Game&lt;br&gt;name&lt;br&gt;description&lt;br&gt;id:integer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="30" width="140" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="Forum&lt;br&gt;comment&lt;br&gt;user_id:integer" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-                    <mxGeometry x="280" y="230" width="110" height="110" as="geometry"/>
+                <mxCell id="9" value="Forum&lt;br&gt;comment&lt;br&gt;user_id:integer&lt;br&gt;game_id:integer" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="180" width="110" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="2">
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
