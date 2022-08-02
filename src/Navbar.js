@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link,useNavigate } from 'react-router-dom'
-const Navbar = ({ onLogout })=>{
+import { NavLink, useNavigate } from 'react-router-dom'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import {Button} from 'react-bootstrap'
+
+const NavBar = ({ onLogout })=>{
     let navigate = useNavigate()
     function handleLogout(){
         fetch("/logout", {
@@ -15,18 +19,19 @@ const Navbar = ({ onLogout })=>{
     }
     
     return (
-    <nav id="Nav">
-        <Link to="/all">Leaderboard</Link>
-        <break> || </break>
-        <Link to="/main">Play</Link>
-            <break> || </break>
-        <Link to="/me">User Profile</Link>
-
-            <break> || </break>
-        <button onClick={handleLogout}>Logout</button>
-    </nav>
-
+    <Navbar bg="info" variant="info">
+        <Nav classNmae="me-auto">
+        <NavLink className="link" to="/all"><Button variant="light">Leaderboard</Button></NavLink>
+       
+        <NavLink className="link" to="/main"><Button variant="danger">Play</Button></NavLink>
+           
+        <NavLink className="link" to="/me"><Button>User Profile</Button></NavLink>
+        
+        
+        <button onClick={handleLogout}><b>Logout</b></button>
+        </Nav>
+        </Navbar>
     )
 }
 
-export default Navbar;
+export default NavBar;

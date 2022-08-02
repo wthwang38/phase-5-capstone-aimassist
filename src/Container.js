@@ -10,11 +10,12 @@ const Container = ({user}) => {
     const [xNum, setXNum] = useState(1)
     const [yNum, setYNum] = useState(1)
     const [timeBetween, setTimeBetween] = useState(0)
-    const [startClicked, setStartClicked] = useState(false)
+    const [startClicked, setStartClicked] = useState(true)
     const [newColor, setNewColor] = useState('#FF0000')
     const [totalCount, setTotalCount] = useState(1) //logs total clicks
     const [circleCount, setCircleCount] = useState(1) //logs circle clicks
     const [gameTimer, setGameTimer] = useState() 
+    const [startTimer, setStartTimer] = useState(false)
     const colors = ['#ee82ee', '#00FFFF', '#6495ED', '#8A2BE2', '#FFD700', '#191970', '#7fff00', '#8b00b8', '#ff1493', '#48d1cc']
     // const [diff, setDiff] = useState(3000)
     // let circleTime = useRef(null);
@@ -26,6 +27,7 @@ const Container = ({user}) => {
         setGameTimer(0)
         setAvgTime([])
         setStartClicked(!startClicked)
+        setStartTimer(!startTimer)
     }
          const circleTimer = ()=> {
         circleTime = setTimeout(createRandomCircles, 2000)
@@ -108,6 +110,7 @@ const Container = ({user}) => {
     setCircleCount(1)
     setTotalCount(1)
     setTimeBetween(1)
+    navigate("/me")
    }
     const circle = <div className="circle" style={Object.assign({}, x, y, color)} onClick={() => {
         handleClickInCircle();
@@ -127,7 +130,7 @@ const Container = ({user}) => {
         let total = 0;
         let count = 0;
         avgTime.forEach((item)=>{
-            total += item;
+            total+= item;
             count++;
         });
         return total/count;
@@ -135,7 +138,7 @@ const Container = ({user}) => {
     
     return (
         <div>
-            <GameTimer gameTimer={gameTimer} setGameTimer={setGameTimer} endGame={endGame}/>
+            <GameTimer gameTimer={gameTimer} setGameTimer={setGameTimer} endGame={endGame} startTimer={startTimer}/>
             {/* <button id="difficulty" onClick={()=>setDiff(4000)}>Easy</button>
             <button id="difficulty" onClick={()=>setDiff(3000)}>Medium</button>
             <button id="difficulty" onClick={()=>setDiff(1000)}>HARD</button> */}

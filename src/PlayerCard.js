@@ -1,17 +1,12 @@
 import React from "react";
+import Stack from 'react-bootstrap/Stack'
 
 const PlayerCard = ({username, picture}) =>{
     
     return(
-        <ul>
-            <li>{username} 
-                <img src={picture} alt="profile"/>
-                <ul id="stats">
-                    <li></li>
-                </ul>
-            </li>
-            
-        </ul>
+        <Stack gap={3}>
+            <div>{username}<img src={picture} alt="profile"/></div>
+         </Stack>
     )
 }
 

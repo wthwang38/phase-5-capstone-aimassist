@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './Container'
-import Navbar from './Navbar'
+import NavBar from './NavBar'
 const Main = ({user, handleLogout}) => {
 
 
@@ -8,7 +8,7 @@ const Main = ({user, handleLogout}) => {
 
 
     <div id='main'>
-      {user ? <Navbar onLogout={handleLogout} /> : null}
+      {user ? <NavBar onLogout={handleLogout} /> : null}
       <h2>Hi, {user.username}!</h2>
       <Container user={user}/>
       {/* <Leaderboard/> */}

@@ -1,16 +1,19 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
-const GameTimer = ({gameTimer, setGameTimer, endGame})=> {
-
-
+const GameTimer = ({ gameTimer, setGameTimer, endGame, startTimer })=> {
+    
      useEffect(() => {
-        let timer;
-        if(gameTimer<20){
-            timer = setTimeout(()=>setGameTimer(gameTimer + 1), 1000);
-            }
-        else{
-            clearTimeout(timer)
-            endGame()}
+        if (startTimer){
+
+            let timer;
+            if(gameTimer<20){
+                timer = setTimeout(()=>setGameTimer(gameTimer + 1), 1000);
+                }
+            else{
+                clearTimeout(timer)
+                endGame()}
+        }
+        
 
      },[gameTimer])
     
@@ -19,10 +22,15 @@ const GameTimer = ({gameTimer, setGameTimer, endGame})=> {
 
 
     return(
+   
+        
+   
         <div>
-            Timer:{gameTimer}
             
-        </div>
+            Timer:{gameTimer}
+            </div>
+        
+            
     )
 }
 export default GameTimer;

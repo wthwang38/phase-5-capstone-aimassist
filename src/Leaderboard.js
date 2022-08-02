@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import PlayerCard from "./PlayerCard";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
+
 
 const Leaderboard = ()=> {
     const [players, setPlayers] = useState([])
@@ -17,7 +18,7 @@ const Leaderboard = ()=> {
  
     return(
         <div>
-            <Navbar/>
+            <NavBar/>
             The Leaderboard
             {listPlayers}
         </div>    

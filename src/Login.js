@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-
-
+import { Button } from 'react-bootstrap';
+import {Form} from 'react-bootstrap'
 const Login = ({ onLogin })=> {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -34,24 +34,29 @@ const Login = ({ onLogin })=> {
     }
 
 return (
-    <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Email</label>
-        <input 
-        type="text" 
-        id="username"
-        autoComplete='off'
-        value={username} 
-        onChange={(e)=> setUsername(e.target.value)}/>
-       
-        <label htmlFor="password">Password</label>
-        <input 
-        type="password" id="password" autoComplete='current-password'
+    
+    <Form onSubmit={handleSubmit}>
+        
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control
+                type="text"
+                value={username} 
+                onChange={(e)=> setUsername(e.target.value)}/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Password:</Form.Label>
+        <Form.Control
+        type="password" 
+        autoComplete='current-password'
         value={password} 
         onChange={(e)=> setPassword(e.target.value)}/>
-
-        <button type="submit">{isLoading ? "Loading..." : "Login"}</button>
+    </Form.Group>
+        <Button type="submit" variant="danger">{isLoading ? "Loading..." : "Login"}</Button>
         {errors.map((error)=> (<div key={error}>{error}</div>))}
-    </form>
+    
+    </Form>
+    
     );
 }
 

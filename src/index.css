@@ -1,10 +1,28 @@
+#bgvid{
+  margin-top: 50px;
+  position:fixed;
+  height: 140vh;
+  width: 100%;
 
+  object-fit:cover;
+  z-index: -1;
+}
+#home_header{
+  font-size: 40px;  
+  margin-top:20px;
+  margin-left:400px;
+  font-weight: 800;
+  font-family: 'Impact',"fantasy";
+}
 #playbox {
-  border-style: dotted;
+  border-style:ridge;
   background-color:blanchedalmond;
   width: 900px;
   height: 600px;
- 
+  cursor: crosshair;
+}
+#email{
+margin-left:130px
 
 }
 

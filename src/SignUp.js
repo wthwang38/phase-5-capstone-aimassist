@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import {Form} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 const SignUp = ({onSignUp})=> {
     const [username, setUsername] = useState("")
     const [imgProfile, setImgProfile] = useState("")
@@ -32,36 +33,41 @@ const SignUp = ({onSignUp})=> {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <label className="username">Email:</label>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group id="email">
+            <Form.Label className="username">Email:</Form.Label>
             <input 
             type="text" 
             id="username" 
             value={username} 
             onChange={(e)=> setUsername(e.target.value)}/>
-
-            <label className="imgProfile">ProfilePic:</label>
+            </Form.Group>
+            <Form.Group>
+            <Form.Label className="imgProfile">ProfileUrl :</Form.Label>
             <input 
             type="text" 
             id="imgProfile" 
             value={imgProfile} 
             onChange={(e)=>setImgProfile(e.target.value)}/>
-
-            <label className="password">Password:</label>
+            </Form.Group>
+            <Form.Group>
+            <Form.Label className="password">Password:</Form.Label>
             <input 
             type="password" 
             id="password" 
             value={password} 
             onChange={(e)=> setPassword(e.target.value)}/>
-
-            <label className="password_confirmation">Confirmation Password:</label>
+            </Form.Group>
+            <Form.Group>
+            <Form.Label className="password_confirmation">Confirmation Password:</Form.Label>
             <input 
             type="password" 
             id="password_confirmation" 
             value={passwordConfirmation} 
             onChange={(e)=> setPasswordConfirmation(e.target.value)}/>
-            <button type="submit">Submit</button>
-        </form>
+            </Form.Group>
+            <Button type="submit" variant="danger">Submit</Button>
+        </Form>
 
 
     )

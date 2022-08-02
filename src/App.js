@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useEffect, useState} from 'react'
 import Main from './Main';
 import {Routes, Route, useNavigate} from 'react-router-dom'
@@ -17,13 +18,13 @@ function App() {
       }
     });
   }, []);
-  console.log(user)
+ 
   function handleLogout() {
     setUser(null)
     navigate('/')
   }
   if (!user) return <Home onLogin={setUser} />;
-  console.log(user.name)
+  
     return( 
       <div className="App">
 

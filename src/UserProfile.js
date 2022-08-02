@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './NavBar'
 const UserProfile = ({user})=> {
-    console.log(user)
+
     return(
         <div>
             <Navbar/>
