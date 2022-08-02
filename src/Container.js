@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import GameTimer from './GameTimer';
+import Logger from './Logger';
 
-const Container = () => {
+const Container = ({user}) => {
+    const game_id = 1
     const [xNum, setXNum] = useState(1)
     const [yNum, setYNum] = useState(1)
     const [timeBetween, setTimeBetween] = useState(0)
@@ -62,21 +64,44 @@ const Container = () => {
         circleTimer()
 
     }    
-    
-   function missedClicks(){
-        const missed = totalCount - circleCount
-        return missed
-   }
+  
+   let hits = circleCount-1
+   let total = totalCount-1
+    let missed = totalCount-circleCount
    let avg;
+    let hitAcc = 0
+
+    function hitAccuracy() {
+        let hitAcc = (hits / total) * 100
+        return hitAcc;
+    }
+    hitAcc = hitAccuracy()
+    function pushStats() {
+        fetch("/stat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                missed: missed,
+                hit: hits,
+                total: total,
+                timeba: avg,
+                acc_percent: hitAcc,
+                user_id: user.id,
+                game_id: game_id
+            }),
+        })
+    }
+
+
    function endGame(){
-    console.log("Missed:", missedClicks())
-    console.log("Hits:",circleCount-1)
-    console.log("Total:",totalCount-1)
+    console.log("missed:",missed, "hits:", hits,"total:", total,"avg:", avg,"hitacc:", hitAcc,"user:", user.id, "game:",game_id)
     clearTimeout(circleTime)
     circleTime = null
     setStartClicked(!startClicked)
     avg = avgAllTime()
-    console.log("AVERAGE SPEED:", avg)
+    pushStats()
     setCircleCount(1)
     setTotalCount(1)
     setTimeBetween(1)
@@ -105,15 +130,14 @@ const Container = () => {
         });
         return total/count;
     }
+    
     return (
         <div>
             <GameTimer gameTimer={gameTimer} setGameTimer={setGameTimer} endGame={endGame}/>
             {/* <button id="difficulty" onClick={()=>setDiff(4000)}>Easy</button>
             <button id="difficulty" onClick={()=>setDiff(3000)}>Medium</button>
             <button id="difficulty" onClick={()=>setDiff(1000)}>HARD</button> */}
-            <div id="missed">Missed: {missedClicks()}</div>
-            <div id="hit">Hits: {circleCount-1}</div>
-            <div id="total">Total: {totalCount-1}</div>
+            <Logger missedClicks={missed} circleCount={circleCount} totalCount={totalCount} hitAcc={hitAcc}/>
             {startClicked ? <button id="start_button" onClick={startGame}>START</button> : null}
          <div id='playbox' onClick={()=> clickCounter(totalCount, setTotalCount)}> 
             {startClicked ? null : <div>{circle}</div>}

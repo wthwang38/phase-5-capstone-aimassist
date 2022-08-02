@@ -1,6 +1,6 @@
 import React from 'react'
-const UserProfile = ()=> {
-
+const UserProfile = ({user})=> {
+    console.log(user)
     return(
         <div>
             UserProfilePAGE

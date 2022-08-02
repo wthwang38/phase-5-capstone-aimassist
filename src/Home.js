@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import { NavLink } from "react-router-dom";
 
 function Home({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
@@ -10,6 +9,7 @@ function Home({ onLogin }) {
         <div>
             {showLogin ? (
             <div>
+                <header id="home_header">AIM ASSIST</header>
                 <Login onLogin={onLogin} />
                  <p>
                      Don't have an account? &nbsp;
@@ -20,6 +20,7 @@ function Home({ onLogin }) {
             </div>
             ) : (
             <div>
+                <header id="home_header">AIM ASSIST</header>
                  <SignUp onSignUp={onLogin} />
                  <p>
                      Already have an account? &nbsp;
