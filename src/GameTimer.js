@@ -4,10 +4,13 @@ const GameTimer = ({gameTimer, setGameTimer, endGame})=> {
 
 
      useEffect(() => {
+        let timer;
         if(gameTimer<20){
-            setTimeout(()=>setGameTimer(gameTimer + 1), 1000);
-        }
-        else{endGame()}
+            timer = setTimeout(()=>setGameTimer(gameTimer + 1), 1000);
+            }
+        else{
+            clearTimeout(timer)
+            endGame()}
 
      },[gameTimer])
     

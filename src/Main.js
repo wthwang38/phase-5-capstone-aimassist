@@ -11,6 +11,7 @@ const Main = ({user, handleLogout}) => {
       {user ? <Navbar onLogout={handleLogout} /> : null}
       <h2>Hi, {user.username}!</h2>
       <Container user={user}/>
+      {/* <Leaderboard/> */}
     </div>
   )
 }

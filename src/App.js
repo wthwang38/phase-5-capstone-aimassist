@@ -5,7 +5,7 @@ import Home from './Home';
 import Login from './Login';
 import SignUp from './SignUp';
 import UserProfile from './UserProfile';
-
+import Leaderboard from './Leaderboard';
 function App() {
   let navigate = useNavigate()
   const [user, setUser] = useState(null)
@@ -31,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home onLogin={setUser} />}/> 
           <Route path="/main" element={<Main user={user} setUser={setUser} handleLogout={handleLogout}/>}/> 
+          <Route path="/all" element={<Leaderboard/>}/>
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/login" element={<Login />}/>
            <Route path="/me" element={<UserProfile user={user}/>}/>

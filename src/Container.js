@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import GameTimer from './GameTimer';
 import Logger from './Logger';
 
+
 const Container = ({user}) => {
+    let navigate = useNavigate()
     const game_id = 1
     const [xNum, setXNum] = useState(1)
     const [yNum, setYNum] = useState(1)
@@ -65,11 +68,11 @@ const Container = ({user}) => {
 
     }    
   
-   let hits = circleCount-1
-   let total = totalCount-1
-    let missed = totalCount-circleCount
-   let avg;
-    let hitAcc = 0
+        let hits = circleCount-1
+        let total = totalCount-1
+        let missed = totalCount-circleCount
+        let avg;
+        let hitAcc = 0
 
     function hitAccuracy() {
         let hitAcc = (hits / total) * 100
@@ -96,7 +99,7 @@ const Container = ({user}) => {
 
 
    function endGame(){
-    console.log("missed:",missed, "hits:", hits,"total:", total,"avg:", avg,"hitacc:", hitAcc,"user:", user.id, "game:",game_id)
+    console.log("missed:",missed, "hits:", hits,"total:", total,"timebetweenavg:", avg,"hitacc:", hitAcc,"user:", user.id, "game:",game_id)
     clearTimeout(circleTime)
     circleTime = null
     setStartClicked(!startClicked)
@@ -105,7 +108,6 @@ const Container = ({user}) => {
     setCircleCount(1)
     setTotalCount(1)
     setTimeBetween(1)
-    console.log("GAME OVER")
    }
     const circle = <div className="circle" style={Object.assign({}, x, y, color)} onClick={() => {
         handleClickInCircle();
@@ -137,7 +139,7 @@ const Container = ({user}) => {
             {/* <button id="difficulty" onClick={()=>setDiff(4000)}>Easy</button>
             <button id="difficulty" onClick={()=>setDiff(3000)}>Medium</button>
             <button id="difficulty" onClick={()=>setDiff(1000)}>HARD</button> */}
-            <Logger missedClicks={missed} circleCount={circleCount} totalCount={totalCount} hitAcc={hitAcc}/>
+            <Logger missedClicks={missed} circleCount={circleCount} totalCount={totalCount} hitAcc={hitAcc} startClicked={startClicked}/>
             {startClicked ? <button id="start_button" onClick={startGame}>START</button> : null}
          <div id='playbox' onClick={()=> clickCounter(totalCount, setTotalCount)}> 
             {startClicked ? null : <div>{circle}</div>}

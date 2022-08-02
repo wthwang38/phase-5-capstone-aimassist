@@ -6,7 +6,7 @@ const UserProfile = ({user})=> {
         <div>
             <Navbar/>
             <div className="name">{user.username}</div>
-            <img src={user.img_profile}/>
+            <img src={user.img_profile} alt="profile face"/>
             <div>{}</div>
         </div>
     )
