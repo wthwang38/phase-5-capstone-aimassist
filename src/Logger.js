@@ -7,11 +7,11 @@ const Logger = ({missedClicks, circleCount, totalCount, hitAcc, startClicked})=>
 
     
     return(
-        <div>
-            <div id="missed">Missed: {missedClicks}</div>
-            <div id="hit">Hits: {hits}</div>
-            <div id="total">Total: {total}</div>
-           {!startClicked ? <div id="accuracy">Accuracy: {hitAcc}</div> : null}
+        <div id="logger">
+            <span className="stats" id="missed">Missed: {missedClicks}</span>
+            <span className="stats" id="hit">Hits: {hits}</span>
+            <span className="stats" id="total">Total: {total}</span>
+           {!startClicked ? <span id="accuracy">Accuracy: {hitAcc}</span> : null}
         </div>
     )
 }

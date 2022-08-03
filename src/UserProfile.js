@@ -16,10 +16,10 @@ const UserProfile = ({user})=> {
     }
     
     return(
-        <div>
-            <div className="name">{user.username}</div>
-            <img src={user.img_profile} alt="profile face"/>
-            <div>Score: {user.score}</div>
+        <div id='parent-profile-div'>
+            <div id="user-profile-name"><b>{user.username}</b></div>
+            <img src={user.img_profile} alt="profile face" id="user_profile"/>
+            <div className="div_stats">Score: {user.score}</div>
             <div className="div_stats">Missed: {user.total_missed}</div>
             <div className="div_stats">Hits: {user.total_hits}</div>
             <div className="div_stats">Total Clicks: {user.total_total}</div>

@@ -1,3 +1,6 @@
+#main{
+
+}
 #bgvid{
   margin-top: 15px;
   position:fixed;
@@ -18,17 +21,38 @@
   background-color:blanchedalmond;
   width: 900px;
   height: 600px;
-  cursor: crosshair;
-  
+  cursor: crosshair; 
 }
+#parent-profile-div{
+  padding-left: 40px;
+  align-content: center;
+}
+#title-leader-head{
+  text-shadow: 2px 2px 2px lightblue;
+}
+.rows{
+  font-weight:700;
+}
+.rows-missed{
+  color:red;
+  font-weight:800;
+}
+.rows-hits{
+  color:green;
+  font-weight:800;
+}
+.header-leader{
+  font-weight:900;
+  background-color: lightgray;
+  width:135px;
 
+}
 .circle {
   border-radius: 100%;
   border: 2px solid rgb(30, 30, 29);
   width: 20px;
   height: 20px;
 }
-
 .form {
   color:aliceblue;
     position: absolute;
@@ -42,7 +66,9 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
-
+#user-profile-lead{
+  background-color: azure;
+}
 .leaderboard-profile-image{
   width: 100px;
   height: auto;
@@ -50,4 +76,20 @@
 }
 #container{
   padding-bottom: 40px;
+}
+#user_profile{
+  width: 400px;
+  height: auto; 
+  
+}
+
+#user-profile-name{
+  font-size: 70px;
+  padding: 30px;
+}
+#logger{
+  align-content: center;
+}
+.stats{
+  padding: 10px;
 }

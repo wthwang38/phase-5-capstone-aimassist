@@ -20,18 +20,18 @@ const Leaderboard = ({updateP})=> {
  
     return(
         <div>
-            The Leaderboard
+            <h1 id="title-leader-head"><b>The Leaderboard</b></h1>
         <table>
     <thead>
         <tr style={{ textAlign: "center" }}>
-            <th>Username</th>
-            <th>Score</th>
-            <th>Total Missed</th>
-            <th>Total Hits</th>
-            <th>Accuracy</th>
+            <th className="header-leader">Username</th >
+            <th className="header-leader">Score</th >
+            <th className="header-leader">Total Missed</th >
+            <th className="header-leader">Total Hits</th >
+            <th className="header-leader">Accuracy</th>
         </tr>
     </thead>
-     <tbody>{listPlayers.sort()}</tbody>
+     <tbody>{listPlayers}</tbody>
 </table> 
         </div>   
     )
