@@ -19,9 +19,9 @@ const Leaderboard = ({updateP})=> {
     })
  
     return(
-        <div>
+        <div className="leaderboard">
             <h1 id="title-leader-head"><b>The Leaderboard</b></h1>
-        <table>
+        <table className="leaderboard">
     <thead>
         <tr style={{ textAlign: "center" }}>
             <th id="user-col-leader">Username</th >

@@ -2,11 +2,10 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import GameTimer from './GameTimer';
 import Logger from './Logger';
-import UserProfile from './UserProfile';
-//import Leaderboard from './Leaderboard';
 
 
-const Container = ({user, updateP, setUpdateP}) => {
+
+const Container = ({ user, updateP, setUpdateP, setUPAvg, setUPHitAcc, setUPHits, setUPMissed, setUPTotal}) => {
     let navigate = useNavigate()
     const game_id = 1
     const [xNum, setXNum] = useState(1)
@@ -107,7 +106,13 @@ const Container = ({user, updateP, setUpdateP}) => {
         })
     }
 
-
+    function currentUP(){
+        setUPAvg(avg)
+        setUPHitAcc(hitAcc)
+        setUPHits(hits)
+        setUPMissed(missed)
+        setUPTotal(total)
+    }
    function endGame(){
     console.log("missed:",missed, "hits:", hits,"total:", total,"timebetweenavg:", avg,"hitacc:", hitAcc,"user:", user.id, "game:",game_id)
     clearTimeout(circleTime)
@@ -116,6 +121,7 @@ const Container = ({user, updateP, setUpdateP}) => {
     avg = avgAllTime()
     pushStats()
     resetFetch()
+    currentUP()
     navigate("/me")
    }
     const circle = <div className="circle" style={Object.assign({}, x, y, color)} onClick={() => {

@@ -1,5 +1,9 @@
+.leaderboard{
+  margin:auto;
+  text-align: center;
+}
 #main{
-
+ padding: 10px;
 }
 #bgvid{
   margin-top: 15px;
@@ -26,6 +30,10 @@
 #parent-profile-div{
   padding-left: 40px;
   align-content: center;
+}
+#current-profile-div{
+  margin-top: -180px;
+  margin-inline: 450px;
 }
 #title-leader-head{
   text-shadow: 2px 2px 2px lightblue;

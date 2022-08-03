@@ -12,6 +12,11 @@ function App() {
   let navigate = useNavigate()
   const [user, setUser] = useState(null)
   const [updateP, setUpdateP] = useState(false)
+  const [uPHits, setUPHits] = useState()
+  const [uPTotal, setUPTotal] = useState()
+  const [uPMissed, setUPMissed] = useState()
+  const [uPAvg, setUPAvg] = useState()
+  const [uPHitAcc, setUPHitAcc] = useState()
   useEffect(()=>{
     fetch("/me").then((r) => {
       if (r.ok) {
@@ -32,11 +37,11 @@ function App() {
         {user ? <NavBar onLogout={handleLogout} /> : null}
         <Routes>
           <Route path="/" element={<Home onLogin={setUser} />}/> 
-          <Route path="/main" element={<Main user={user} setUser={setUser} handleLogout={handleLogout} updateP={updateP} setUpdateP={setUpdateP}/>}/> 
+          <Route path="/main" element={<Main user={user} setUser={setUser} handleLogout={handleLogout} updateP={updateP} setUpdateP={setUpdateP} setUPHits={setUPHits} setUPTotal={setUPTotal} setUPMissed={setUPMissed} setUPAvg={setUPAvg} setUPHitAcc={setUPHitAcc}/>}/> 
           <Route path="/all" element={<Leaderboard updateP={updateP}/>}/>
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/login" element={<Login />}/>
-           <Route path="/me" element={<UserProfile user={user}/>}/>
+           <Route path="/me" element={<UserProfile user={user} cH={uPHits} cT={uPTotal} cM={uPMissed} cA={uPAvg} cHA={uPHitAcc}/>}/>
       </Routes>
     </div>
     )
