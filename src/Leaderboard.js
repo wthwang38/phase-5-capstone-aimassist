@@ -1,27 +1,39 @@
 import React, {useEffect, useState} from "react";
 import PlayerCard from "./PlayerCard";
-import NavBar from "./NavBar";
+//import NavBar from "./NavBar";
 
 
-const Leaderboard = ()=> {
+const Leaderboard = ({updateP})=> {
     const [players, setPlayers] = useState([])
 
+    
     useEffect(()=>{
         fetch("/leaderboard")
         .then(r => r.json())
         .then(data => setPlayers(data))
-    },[]);
-
-    const listPlayers = players?.map((player)=>{
-        return (<PlayerCard key={player.id} username={player.username} picture={player.img_profile}/>)
+    },[updateP]);
+    const numDescending = [...players].sort((a, b) => b.score - a.score);
+    
+    const listPlayers = numDescending?.map((player)=>{
+        return (<PlayerCard key={player.id} username={player.username} picture={player.img_profile} totalMissed={player.total_missed} totalHits={player.total_hits} totalClicks={player.total_total} score={player.score} />)
     })
  
     return(
         <div>
-            <NavBar/>
             The Leaderboard
-            {listPlayers}
-        </div>    
+        <table>
+    <thead>
+        <tr style={{ textAlign: "center" }}>
+            <th>Username</th>
+            <th>Score</th>
+            <th>Total Missed</th>
+            <th>Total Hits</th>
+            <th>Accuracy</th>
+        </tr>
+    </thead>
+     <tbody>{listPlayers.sort()}</tbody>
+</table> 
+        </div>   
     )
 }
 

@@ -1,17 +1,17 @@
 import React from 'react'
 import Container from './Container'
-import NavBar from './NavBar'
-const Main = ({user, handleLogout}) => {
+//import NavBar from './NavBar'
+const Main = ({user, updateP, setUpdateP}) => {
 
 
   return (
 
 
     <div id='main'>
-      {user ? <NavBar onLogout={handleLogout} /> : null}
+      {/* {user ? <NavBar onLogout={handleLogout} /> : null} */}
       <h2>Hi, {user.username}!</h2>
-      <Container user={user}/>
-      {/* <Leaderboard/> */}
+      <img src={user.img_profile} alt="profile"/>
+      <Container user={user} updateP={updateP} setUpdateP={setUpdateP}/>
     </div>
   )
 }

@@ -1,29 +1,25 @@
 #bgvid{
-  margin-top: 50px;
+  margin-top: 15px;
   position:fixed;
   height: 140vh;
   width: 100%;
-
   object-fit:cover;
   z-index: -1;
 }
 #home_header{
   font-size: 40px;  
-  margin-top:20px;
-  margin-left:400px;
   font-weight: 800;
   font-family: 'Impact',"fantasy";
 }
 #playbox {
+ margin-left: auto;
+ margin-right: auto;
   border-style:ridge;
   background-color:blanchedalmond;
   width: 900px;
   height: 600px;
   cursor: crosshair;
-}
-#email{
-margin-left:130px
-
+  
 }
 
 .circle {
@@ -31,5 +27,27 @@ margin-left:130px
   border: 2px solid rgb(30, 30, 29);
   width: 20px;
   height: 20px;
+}
 
+.form {
+  color:aliceblue;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    /* background: rgb(250, 229, 229); */
+    background: transparent;
+    width: 450px;
+    margin: -140px 0 0 -225px;
+    padding: 40px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.leaderboard-profile-image{
+  width: 100px;
+  height: auto;
+  padding: 15px;
+}
+#container{
+  padding-bottom: 40px;
 }

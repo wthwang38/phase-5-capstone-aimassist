@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import GameTimer from './GameTimer';
 import Logger from './Logger';
+//import Leaderboard from './Leaderboard';
 
 
-const Container = ({user}) => {
+const Container = ({user, updateP, setUpdateP}) => {
     let navigate = useNavigate()
     const game_id = 1
     const [xNum, setXNum] = useState(1)
@@ -22,6 +23,9 @@ const Container = ({user}) => {
     let circleTime;
     const [avgTime, setAvgTime] = useState([]);
 
+    const resetFetch = () => {
+        setUpdateP(!updateP)
+    }
     function startGame(){
         circleTimer()
         setGameTimer(0)
@@ -110,6 +114,7 @@ const Container = ({user}) => {
     setCircleCount(1)
     setTotalCount(1)
     setTimeBetween(1)
+    resetFetch()
     navigate("/me")
    }
     const circle = <div className="circle" style={Object.assign({}, x, y, color)} onClick={() => {
@@ -137,7 +142,7 @@ const Container = ({user}) => {
     }
     
     return (
-        <div>
+        <div id="container">
             <GameTimer gameTimer={gameTimer} setGameTimer={setGameTimer} endGame={endGame} startTimer={startTimer}/>
             {/* <button id="difficulty" onClick={()=>setDiff(4000)}>Easy</button>
             <button id="difficulty" onClick={()=>setDiff(3000)}>Medium</button>
@@ -147,6 +152,7 @@ const Container = ({user}) => {
          <div id='playbox' onClick={()=> clickCounter(totalCount, setTotalCount)}> 
             {startClicked ? null : <div>{circle}</div>}
         </div>
+
         </div>
     );
 

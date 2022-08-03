@@ -11,7 +11,7 @@ function Home({ onLogin }) {
         <div>
             <img id="bgvid" src={machine} type="gif"  alt="duckhunting"/>
             {showLogin ? (
-            <div>
+                <div className="form">
                 <header id="home_header">AIM ASSIST</header>
                 <Login onLogin={onLogin} />
                  <p>
@@ -22,7 +22,7 @@ function Home({ onLogin }) {
                 </p>
             </div>
             ) : (
-            <div>
+                <div className="form">
                 <header id="home_header">AIM ASSIST</header>
                  <SignUp onSignUp={onLogin} />
                  <p>

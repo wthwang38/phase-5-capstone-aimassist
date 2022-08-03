@@ -33,26 +33,27 @@ const SignUp = ({onSignUp})=> {
     }
 
     return(
+        <div>
         <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-            <Form.Label className="username">Email:</Form.Label>
-            <input 
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label >Email:</Form.Label>
+            <Form.Control
             type="text" 
             id="username" 
             value={username} 
             onChange={(e)=> setUsername(e.target.value)}/>
             </Form.Group>
-            <Form.Group>
-            <Form.Label className="imgProfile">ProfileUrl :</Form.Label>
-            <input 
+                <Form.Group className="mb-3">
+             <Form.Label >ProfileUrl:</Form.Label>
+            <Form.Control
             type="text" 
             id="imgProfile" 
             value={imgProfile} 
             onChange={(e)=>setImgProfile(e.target.value)}/>
             </Form.Group>
-            <Form.Group>
-            <Form.Label className="password">Password:</Form.Label>
-            <input 
+            <Form.Group className="mb-3">
+            <Form.Label >Password:</Form.Label>
+            <Form.Control
             type="password" 
             id="password" 
             value={password} 
@@ -60,7 +61,7 @@ const SignUp = ({onSignUp})=> {
             </Form.Group>
             <Form.Group>
             <Form.Label className="password_confirmation">Confirmation Password:</Form.Label>
-            <input 
+            <Form.Control 
             type="password" 
             id="password_confirmation" 
             value={passwordConfirmation} 
@@ -68,7 +69,7 @@ const SignUp = ({onSignUp})=> {
             </Form.Group>
             <Button type="submit" variant="danger">Submit</Button>
         </Form>
-
+        </div>
 
     )
 }

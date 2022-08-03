@@ -34,9 +34,8 @@ const Login = ({ onLogin })=> {
     }
 
 return (
-    
-    <Form onSubmit={handleSubmit}>
-        
+    <div>
+    <Form onSubmit={handleSubmit}>    
         <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email:</Form.Label>
             <Form.Control
@@ -54,9 +53,8 @@ return (
     </Form.Group>
         <Button type="submit" variant="danger">{isLoading ? "Loading..." : "Login"}</Button>
         {errors.map((error)=> (<div key={error}>{error}</div>))}
-    
     </Form>
-    
+    </div>
     );
 }
 

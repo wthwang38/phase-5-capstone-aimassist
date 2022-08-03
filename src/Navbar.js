@@ -21,7 +21,7 @@ const NavBar = ({ onLogout })=>{
     return (
     <Navbar bg="info" variant="info">
         <Nav classNmae="me-auto">
-        <NavLink className="link" to="/all"><Button variant="light">Leaderboard</Button></NavLink>
+        <NavLink className="link" to="/all"><Button variant="success">Leaderboard</Button></NavLink>
        
         <NavLink className="link" to="/main"><Button variant="danger">Play</Button></NavLink>
            
