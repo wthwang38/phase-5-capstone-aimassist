@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import GameTimer from './GameTimer';
 import Logger from './Logger';
+import UserProfile from './UserProfile';
 //import Leaderboard from './Leaderboard';
 
 
@@ -27,6 +28,9 @@ const Container = ({user, updateP, setUpdateP}) => {
         setUpdateP(!updateP)
     }
     function startGame(){
+        setCircleCount(1)
+        setTotalCount(1)
+        setTimeBetween(1)
         circleTimer()
         setGameTimer(0)
         setAvgTime([])
@@ -111,9 +115,6 @@ const Container = ({user, updateP, setUpdateP}) => {
     setStartClicked(!startClicked)
     avg = avgAllTime()
     pushStats()
-    setCircleCount(1)
-    setTotalCount(1)
-    setTimeBetween(1)
     resetFetch()
     navigate("/me")
    }
@@ -152,7 +153,6 @@ const Container = ({user, updateP, setUpdateP}) => {
          <div id='playbox' onClick={()=> clickCounter(totalCount, setTotalCount)}> 
             {startClicked ? null : <div>{circle}</div>}
         </div>
-
         </div>
     );
 
