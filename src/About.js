@@ -8,7 +8,7 @@ const About = ()=> {
             <h1 className="text-center">
                <b> About Aim Assist</b>
             </h1>
-            <ul>
+            <ul style={{marginLeft:'20%', marginRight: '20%'}}>
                 <li>
                 This Application is to help with hand/eye coordination.
                 </li> 

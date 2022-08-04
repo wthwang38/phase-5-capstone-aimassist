@@ -1,7 +1,7 @@
 import React from "react";
 //import Stack from 'react-bootstrap/Stack'
 
-const PlayerCard = ({username, picture, totalMissed, totalHits, totalClicks, score, uA}) =>{
+const PlayerCard = ({username, picture, totalMissed, totalHits, totalClicks, score, uA, index}) =>{
     const accuracy = (totalHits/totalClicks)*100
     
     const timebaArr = uA.map((acc) => acc.timeba)
@@ -18,6 +18,7 @@ const PlayerCard = ({username, picture, totalMissed, totalHits, totalClicks, sco
     return(
         
         <tr>
+            <td>{index+1}</td>
             <td style={{ textAlign:"left" }}id="user-profile-lead"><img className="leaderboard-profile-image" src={picture} alt="profile" />{username} </td>
             <td className="rows" style={{ padding: "0px 50px" }}>{score}</td>
             <td className="rows-missed" style={{ padding: "0px 50px" }}>{totalMissed}</td>
