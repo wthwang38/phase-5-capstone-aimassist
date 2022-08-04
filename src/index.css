@@ -4,6 +4,7 @@
 }
 #main{
  padding: 10px;
+ background-color: #e9edc9
 }
 #bgvid{
   margin-top: 15px;
@@ -104,4 +105,14 @@
 }
 .stats{
   padding: 10px;
+}
+.text-center{
+  text-align: center;
+}
+ul{
+  list-style: none;
+  margin: auto;
+  font-weight: 500;
+  background-color: #8ecae6;
+
 }
