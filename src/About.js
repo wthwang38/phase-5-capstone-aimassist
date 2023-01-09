@@ -23,9 +23,8 @@ const About = ()=> {
                 
                 </li>
             </ul>
-            {/* <img href="https://files.slack.com/files-pri/T02MD9XTF-F03SCNKS5D0/chat_for_fun.png"
-            /> */}
-            {/* <link href="vast-ocean-03320.herokuapp.com" rel="noreferrer">Chat about it!</link> */}
+
+            <a href="http://vast-ocean-03320.herokuapp.com/group/18" rel="noreferrer">Chat about it at CHAT FOR FUN</a>
         </div>
 
     )

@@ -37,7 +37,7 @@ return (
     <div>
     <Form onSubmit={handleSubmit}>    
         <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email:</Form.Label>
+            <Form.Label>Username:</Form.Label>
             <Form.Control
                 type="text"
                 value={username} 

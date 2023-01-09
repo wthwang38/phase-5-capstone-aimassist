@@ -18,7 +18,7 @@ const PlayerCard = ({username, picture, totalMissed, totalHits, totalClicks, sco
     return(
         
         <tr>
-            <td>{index+1}</td>
+            <td style={{fontWeight:"800"}}>{index+1}</td>
             <td style={{ textAlign:"left" }}id="user-profile-lead"><img className="leaderboard-profile-image" src={picture} alt="profile" />{username} </td>
             <td className="rows" style={{ padding: "0px 50px" }}>{score}</td>
             <td className="rows-missed" style={{ padding: "0px 50px" }}>{totalMissed}</td>

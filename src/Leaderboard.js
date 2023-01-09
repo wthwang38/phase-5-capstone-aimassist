@@ -12,6 +12,7 @@ const Leaderboard = ({updateP})=> {
         .then(r => r.json())
         .then(data => setPlayers(data))
     },[updateP]);
+    console.log(players)
     const numDescending = [...players].sort((a, b) => b.score - a.score);
     
     const listPlayers = numDescending?.map((player, index)=>{
