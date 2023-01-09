@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import PlayerCard from "./PlayerCard";
-//import NavBar from "./NavBar";
+
 
 
 const Leaderboard = ({updateP})=> {
