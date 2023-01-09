@@ -1,5 +1,5 @@
 import React from 'react'
-//import Navbar from './NavBar'
+
 const UserProfile = ({user, cH, cT, cM, cA, cHA})=> {
     const accuracy = (user.total_hits / user.total_total) * 100
 
