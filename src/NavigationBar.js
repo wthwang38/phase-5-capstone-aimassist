@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import {Button} from 'react-bootstrap'
 
-const NavBar = ({ onLogout })=>{
+const NavigationBar = ({ onLogout })=>{
     let navigate = useNavigate()
     function handleLogout(){
         fetch("/logout", {
@@ -35,4 +35,4 @@ const NavBar = ({ onLogout })=>{
     )
 }
 
-export default NavBar;
+export default NavigationBar;

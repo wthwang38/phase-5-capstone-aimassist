@@ -7,7 +7,7 @@ import Login from './Login';
 import SignUp from './SignUp';
 import UserProfile from './UserProfile';
 import Leaderboard from './Leaderboard';
-import NavBar from "./NavBar";
+import NavigationBar from "./NavigationBar";
 import About from "./About";
 function App() {
   let navigate = useNavigate()
@@ -35,7 +35,7 @@ function App() {
     return( 
       <div className="App">
 
-        {user ? <NavBar onLogout={handleLogout} /> : null}
+        {user ? <NavigationBar onLogout={handleLogout} /> : null}
         <Routes>
           <Route path="/" element={<Home onLogin={setUser} />}/> 
           <Route path="/main" element={<Main user={user} setUser={setUser} handleLogout={handleLogout} updateP={updateP} setUpdateP={setUpdateP} setUPHits={setUPHits} setUPTotal={setUPTotal} setUPMissed={setUPMissed} setUPAvg={setUPAvg} setUPHitAcc={setUPHitAcc}/>}/> 

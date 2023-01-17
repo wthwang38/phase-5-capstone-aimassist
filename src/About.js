@@ -23,8 +23,8 @@ const About = ()=> {
                 
                 </li>
             </ul>
-
-            <a href="http://vast-ocean-03320.herokuapp.com/group/18" rel="noreferrer">Chat about it at CHAT FOR FUN</a>
+{/* 
+            <a href="http://vast-ocean-03320.herokuapp.com/group/18" rel="noreferrer">Chat about it at CHAT FOR FUN</a> */}
         </div>
 
     )
